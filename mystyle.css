@@ -1,0 +1,11 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+
+#p-button:parent {
+    width: 400px;
+    height: 400px;
+    background-image: url(https://ssl.gstatic.com/gb/images/i1_1967ca6a.png);
+}
