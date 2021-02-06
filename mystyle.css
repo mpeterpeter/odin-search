@@ -187,3 +187,60 @@ svg {
 #language-section {
     text-align: center;
 }
+
+
+/*FOOTER*/
+
+footer {
+    background: #f2f2f2;
+    line-height: 40px;
+    border-top: 1px solid #dadce0;
+    font-size: 15px;
+    color: rgba(0, 0, 0, .54);
+    margin-top: auto;
+}
+
+#footer-part1 {
+    line-height: 40px;
+    margin-left: 30px;
+}
+
+#footer-part2 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    line-height: 40px;
+    border: 1px solid #dadce0;
+}
+
+#footer-left {
+    margin-left: 30px;
+}
+
+#footer-right {
+    margin-right: 30px;
+}
+
+#footer-left>a {
+    margin-right: 15px;
+}
+
+#footer-right>a {
+    margin-left: 15px;
+}
+
+.footer-links-div>a {
+    text-decoration: none;
+    color: rgba(0, 0, 0, .54);
+}
+
+.footer-links-div>a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width:800px) {
+    #footer-part2 {
+        flex-direction: column;
+        align-content: center;
+    }
+}
