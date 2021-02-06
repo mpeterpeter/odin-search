@@ -9,49 +9,69 @@ body {
     font-size: small;
 }
 
+body {
+    display: grid;
+    grid-template-rows: 89px auto auto;
+}
+
 
 /*HEADER STYLING*/
 
-#navbar {
+header {
+    grid-row: 1/span 1;
+    font-size: 13px;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0px;
-    padding-top: 10px;
-    opacity: 0.75;
-    font-size: 13px;
+    margin: 10px 0;
+    padding: 0;
 }
 
-.navList {
+
+/*both nav lists*/
+
+.nav-list {
     display: flex;
-    flex-flow: row wrap;
-    gap: 12px;
+    flex-direction: row;
+}
+
+.nav-list>li {
     list-style-type: none;
 }
 
-.navList>li {
-    margin-right: 8px;
-}
-
-a {
+.nav-list>li>a {
     text-decoration: none;
     color: black;
+    opacity: 0.75;
 }
 
-a:hover {
+.nav-list>li>a:hover {
     text-decoration: underline;
 }
 
-.navList.left {
-    margin-left: -6px;
+
+/*nav-list-left*/
+
+#nav-list-left {
+    margin-left: -15px;
 }
 
-.navList.right {
+#nav-list-left>li {
+    margin-right: 15px;
+}
+
+
+/*nav-list-right*/
+
+#nav-list-right {
     margin-right: 25px;
 }
 
-#app-button-div {
+#nav-list-right>li {
+    margin-left: 15px;
+}
+
+#nav-app-button {
     width: 30px;
     height: 30px;
     margin-top: -8px;
@@ -62,11 +82,11 @@ a:hover {
     opacity: 0.75;
 }
 
-#app-button-div:hover {
+#nav-app-button:hover {
     opacity: 1;
 }
 
-#profile-button {
+#nav-profile-button {
     display: grid;
     place-items: center;
     background-color: black;
@@ -80,7 +100,7 @@ a:hover {
     font-weight: 500;
 }
 
-#profile-button:hover {
+#nav-profile-button:hover {
     text-decoration: none;
 }
 
@@ -88,57 +108,82 @@ a:hover {
 /*MAIN STYLING*/
 
 main {
+    grid-row: 2/span 1;
     display: grid;
     place-content: center;
-    height: 70%;
+    height: 100%;
+    margin: 0;
+    font-size: 13px;
 }
 
-#logo {
-    margin: 0 auto;
+#google-logo-div {
+    display: grid;
+    justify-content: center;
+    padding: 30px 0;
 }
 
-#search-container {
-    width: auto;
-    max-width: 500;
-}
-
-#search-form {
-    margin: 0px;
-    padding: 0px;
-}
-
-#iconANDinput {
+#search-div {
     display: flex;
     flex-direction: row;
-    width: min(484px, 90vw);
-    border: rgba(0, 0, 0, 0.2) 1px solid;
-    border-radius: 24px;
-    margin: 10px auto;
+    border: 1px rgba(0, 0, 0, 0.1) solid;
+    border-radius: 25px;
+    padding: 0 5px;
+    width: min(584px, 90vw);
     height: 44px;
 }
 
-#iconANDinput:hover {}
+#search-div:hover {
+    box-shadow: 0 0 5px 1.5px rgba(0, 0, 0, 0.1);
+}
 
-#search-icon {
+#lupe-icon-container {
     display: grid;
     place-content: center;
-    width: 50px;
+    width: 30px;
 }
 
 svg {
+    height: 20px;
     width: 20px;
-    height: auto;
+    fill-opacity: 0.75;
 }
 
-#search-input {
+#search-text-input {
     display: flex;
     flex: 100%;
+    margin: 5px 0px;
+    margin-right: 10px;
     outline: none;
     border: none;
-    margin: 3px;
-    margin-right: 15px;
+    font-size: 16px;
 }
 
-#a_language {
-    color: blue;
+#submit-buttons-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 16px 0;
+}
+
+#submit-buttons-div>button {
+    margin: 11px 4px;
+    font-size: 14px;
+    padding: 0 16px;
+    outline: none;
+    border: 1px solid rgba(235, 233, 233, 0.4);
+    background-color: rgba(235, 233, 233, 0.4);
+    height: 36px;
+    border-radius: 4px;
+    user-select: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+#submit-buttons-div>button:hover {
+    border-color: rgba(197, 197, 197, 0.8);
+    box-shadow: 0 0.8px 1px 0 rgba(197, 197, 197, 0.8);
+}
+
+#language-section {
+    text-align: center;
 }
